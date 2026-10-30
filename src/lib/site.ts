@@ -87,7 +87,10 @@ export const footerNav = {
  * until the Nautilus checkout (`nautilusCheckout` below) is switched on.
  */
 export const membership = {
-  onlineSignupUrl: null as string | null,
+  // Interim: the old Squarespace site's checkout page (plan picker + card form from their current provider).
+  // TODO: this page disappears when this site replaces www.myecowash.com. Before the domain moves, swap it for
+  // the checkout provider's own URL or embed, or switch on `nautilusCheckout` once My Eco Wash is on Nautilus.
+  onlineSignupUrl: "https://www.myecowash.com/membership-checkout-page" as string | null,
   clubName: "Unlimited Eco Wash Club",
   waysToJoin: [
     {
