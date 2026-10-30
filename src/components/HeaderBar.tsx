@@ -9,7 +9,7 @@ import { Clock, MapPin, Menu, Phone, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { FacebookIcon, InstagramIcon } from "@/components/icons";
 import { media } from "@/lib/media";
-import { mainNav, routes, site } from "@/lib/site";
+import { mainNav, routes, site, joinCtaHref } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const isActive = (pathname: string, href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
@@ -80,7 +80,7 @@ export function HeaderBar() {
           <Link href={routes.manageMembership} className={buttonVariants({ variant: "outline", size: "sm" })}>
             Manage My Membership
           </Link>
-          <Link href={routes.join} className={buttonVariants({ size: "sm" })}>
+          <Link href={joinCtaHref} className={buttonVariants({ size: "sm" })}>
             Join the Club
           </Link>
         </div>
@@ -130,7 +130,7 @@ export function HeaderBar() {
                 <Link href={routes.manageMembership} onClick={() => setOpen(false)} className={buttonVariants({ variant: "secondary", size: "lg", className: "w-full" })}>
                   Manage My Membership
                 </Link>
-                <Link href={routes.join} onClick={() => setOpen(false)} className={buttonVariants({ size: "lg", className: "w-full" })}>
+                <Link href={joinCtaHref} onClick={() => setOpen(false)} className={buttonVariants({ size: "lg", className: "w-full" })}>
                   Join the Club
                 </Link>
               </div>

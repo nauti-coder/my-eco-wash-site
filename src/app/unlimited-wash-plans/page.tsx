@@ -7,6 +7,7 @@ import { PlanCard, type PlanCardTone } from "@/components/PlanCard";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
 import { CTABanner } from "@/components/CTABanner";
+import { JoinPlanButton } from "@/components/MembershipDrawer";
 import { buttonVariants } from "@/components/ui/button";
 import { media } from "@/lib/media";
 import { allServices, clubFacts, clubPlans, clubTerms, planIncludes, routes, singleWashes, site } from "@/lib/site";
@@ -44,8 +45,8 @@ export default function PlansPage() {
         }
         intro="If you like a clean car and want to wash it once a day, once a week, or as often as you can, all for one low price, then the Unlimited Eco Wash Club is for you! Simply select the desired wash package, and your credit card will be charged a flat monthly fee."
       >
-        <Link href={routes.join} className={buttonVariants({ size: "lg", className: "w-full sm:w-auto" })}>
-          Join the Club
+        <Link href="#plans-title" className={buttonVariants({ size: "lg", className: "w-full sm:w-auto" })}>
+          Choose a package
         </Link>
         <Link href="#compare" className={buttonVariants({ variant: "outline-light", size: "lg", className: "w-full sm:w-auto" })}>
           Compare services
@@ -122,12 +123,12 @@ export default function PlansPage() {
                   <td className="sticky left-0 bg-card p-4 sm:p-6" />
                   {clubPlans.map((plan) => (
                     <td key={plan.id} className={cn("p-4 text-center sm:p-6", plan.id === "manager-special" && "bg-navy/[0.06]")}>
-                      <Link
-                        href={`${routes.join}?plan=${plan.id}`}
+                      <JoinPlanButton
+                        planId={plan.id}
                         className={buttonVariants({ size: "sm", variant: plan.id === "manager-special" ? "default" : "outline" })}
                       >
                         Join<span className="sr-only"> {plan.name}</span>
-                      </Link>
+                      </JoinPlanButton>
                     </td>
                   ))}
                 </tr>

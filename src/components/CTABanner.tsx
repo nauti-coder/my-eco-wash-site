@@ -3,7 +3,7 @@ import { ArrowRight, Mail, Phone } from "lucide-react";
 import { FacebookIcon, InstagramIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
 import { buttonVariants } from "@/components/ui/button";
-import { clubPlans, membership, routes, site } from "@/lib/site";
+import { clubPlans, membership, routes, site, joinCtaHref } from "@/lib/site";
 import { cn, formatPrice } from "@/lib/utils";
 
 /** The price range comes from the plan list, so it can never drift from the real prices. */
@@ -66,7 +66,7 @@ export function CTABanner() {
               </p>
             ) : null}
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <Link href={routes.join} className={cn(buttonVariants({ size: "lg" }), focusOnNavy, "w-full sm:w-auto")}>
+              <Link href={joinCtaHref} className={cn(buttonVariants({ size: "lg" }), focusOnNavy, "w-full sm:w-auto")}>
                 Join the Club
                 <ArrowRight aria-hidden />
               </Link>

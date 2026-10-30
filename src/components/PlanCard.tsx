@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CheckBadge } from "@/components/icons";
+import { JoinPlanButton } from "@/components/MembershipDrawer";
 import { buttonVariants } from "@/components/ui/button";
 import { routes, type ClubPlan } from "@/lib/site";
 import { cn, formatPrice } from "@/lib/utils";
@@ -130,15 +131,15 @@ export function PlanCard({
       </ul>
 
       <div className="mt-auto flex w-full max-w-sm flex-col pt-8">
-        <Link
-          href={`${routes.join}?plan=${plan.id}`}
+        <JoinPlanButton
+          planId={plan.id}
           className={cn(
             buttonVariants({ variant: styles.cta, size: "lg" }),
             "h-auto min-h-14 w-full whitespace-normal px-5 py-3 text-center leading-tight",
           )}
         >
           Join {plan.name}
-        </Link>
+        </JoinPlanButton>
         {showDetailsLink ? (
           <Link
             href={`${routes.plans}#${plan.id}`}

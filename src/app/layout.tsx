@@ -4,7 +4,8 @@ import "@fontsource-variable/source-serif-4";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { site } from "@/lib/site";
+import { MembershipDrawerProvider } from "@/components/MembershipDrawer";
+import { nautilusCheckout, nautilusCheckoutEnabled, site } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -31,6 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Marks JS as available so scroll-reveal styles only hide content when they can reveal it again. */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        {/* Nautilus embed loader: loaded once for the whole site, only when the Nautilus checkout is switched on. Plain <script>, not next/script. */}
+        {nautilusCheckoutEnabled ? <script defer src={nautilusCheckout.loaderSrc} /> : null}
       </head>
       <body>
         <a
@@ -39,9 +42,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
+        <MembershipDrawerProvider>
+          <Header />
+          <main id="main">{children}</main>
+          <Footer />
+        </MembershipDrawerProvider>
       </body>
     </html>
   );

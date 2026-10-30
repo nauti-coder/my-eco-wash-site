@@ -83,8 +83,8 @@ export const footerNav = {
 /**
  * Membership sign-up. The original site's "Join" links open an external checkout
  * (plan picker + card form) whose URL was not visible in the recording.
- * TODO: set `onlineSignupUrl` to that checkout, or switch the package CTAs to the
- * Nautilus membership checkout drawer if My Eco Wash has a Nautilus organization.
+ * TODO: set `onlineSignupUrl` to that checkout as the interim online sign-up. It is used only
+ * until the Nautilus checkout (`nautilusCheckout` below) is switched on.
  */
 export const membership = {
   onlineSignupUrl: null as string | null,
@@ -104,6 +104,39 @@ export const membership = {
     },
   ],
 } as const;
+
+/**
+ * Nautilus membership checkout (preferred). My Eco Wash is not a Nautilus organization yet, so this is off.
+ * TODO: after onboarding, fill these from Nautilus — the org's storefront slug, the Pembroke Pines Site.id,
+ * and the active recurring SalesItem.id that matches each club package (match by tier and monthly price).
+ * Copy the IDs exactly; never invent them. Once slug + locationId are set, every package "Join" button opens
+ * the real Nautilus checkout in the membership drawer, and the loader script is added to the page.
+ */
+export const nautilusCheckout = {
+  loaderSrc: "https://app.nautilus.co/embed/loader.js",
+  storefrontSlug: null as string | null,
+  locationId: null as string | null,
+  productIds: {} as Partial<Record<"manager-special" | "the-ultimate" | "wheel-and-clean", string>>,
+};
+
+export const nautilusCheckoutEnabled = Boolean(nautilusCheckout.storefrontSlug && nautilusCheckout.locationId);
+
+/** Storefront checkout src for one package. A package with no matched product falls back to the location's full storefront. */
+export function checkoutSrc(planId: PlanId): string | null {
+  if (!nautilusCheckout.storefrontSlug || !nautilusCheckout.locationId) return null;
+  const base = `/c/storefront/${nautilusCheckout.storefrontSlug}?locationId=${nautilusCheckout.locationId}`;
+  const productId = nautilusCheckout.productIds[planId];
+  return productId ? `${base}&productId=${productId}` : base;
+}
+
+/** Where a package's Join button goes while the Nautilus drawer is off: the current online sign-up, else our /join page. */
+export const packageJoinHref = (planId: PlanId) => membership.onlineSignupUrl ?? `${routes.join}?plan=${planId}`;
+
+/**
+ * Where Join CTAs that name no package go. With the drawer on they lead to the package cards
+ * (a checkout without a package would list everything); otherwise to the online sign-up or /join.
+ */
+export const joinCtaHref = nautilusCheckoutEnabled ? routes.plans : (membership.onlineSignupUrl ?? routes.join);
 
 export type PlanId = "manager-special" | "the-ultimate" | "wheel-and-clean";
 
@@ -302,6 +335,43 @@ export const faqs: FaqItem[] = [
       "You will receive an RFID sticker that will be placed on the inside of your front windshield.",
       "Our system will automatically scan your decal when you drive up to our pay kiosk area. This will allow you to enter the car wash without any further action required.",
       "On the date your purchase is confirmed, your membership will renew automatically every month on that date.",
+    ],
+  },
+  {
+    id: "how-often",
+    topic: "membership",
+    question: "How often can I wash with the Unlimited Eco Wash Club?",
+    answer: [
+      "You may wash your vehicle once every 24 hours during the month.",
+      "My Eco Wash will only be closed on specified public holidays and during hurricanes.",
+    ],
+  },
+  {
+    id: "new-vehicle",
+    topic: "membership",
+    question: "What if I get a new vehicle?",
+    answer: [
+      "The Unlimited Eco Wash Club is vehicle-specific and can only be associated with one vehicle.",
+      "If you purchase a new vehicle, simply contact us to update your vehicle profile and have a new RFID installed.",
+    ],
+    link: { label: "Contact us", href: routes.contact },
+  },
+  {
+    id: "billing",
+    topic: "membership",
+    question: "How am I charged each month?",
+    answer: [
+      "My Eco Wash charges your credit card month-to-month. There are no long-term commitments or hidden cancellation charges.",
+      "In the event that you would like to cancel your membership, My Eco Wash must receive written notice 14 days before your next billing date. No refunds or credits will be given for partial periods; however, you may continue to use your membership until your expiry date.",
+    ],
+  },
+  {
+    id: "after-sign-up",
+    topic: "membership",
+    question: "What happens after I sign up?",
+    answer: [
+      "After your first payment is made, please visit us at My Eco Wash to place your RFID sticker onto your vehicle's windscreen.",
+      "For more information, please call or visit us, and our staff will be very happy to assist you.",
     ],
   },
   {

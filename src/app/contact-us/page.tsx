@@ -4,7 +4,7 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
 import { buttonVariants } from "@/components/ui/button";
-import { routes, site } from "@/lib/site";
+import { routes, site, joinCtaHref } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -112,7 +112,7 @@ export default function ContactPage() {
             ))}
             <li className="text-white/75">
               Not a member yet?{" "}
-              <Link href={routes.join} className="font-semibold text-accent underline underline-offset-4">
+              <Link href={joinCtaHref} className="font-semibold text-accent underline underline-offset-4">
                 Join the Unlimited Eco Wash Club
               </Link>
             </li>

@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin, Phone } from "lucide-react";
+import { JoinPlanButton } from "@/components/MembershipDrawer";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
 import { CheckBadge } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { media } from "@/lib/media";
-import { clubPlans, membership, routes, site } from "@/lib/site";
+import { clubPlans, membership, nautilusCheckoutEnabled, routes, site } from "@/lib/site";
 import { cn, formatPrice } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -17,13 +18,14 @@ export const metadata: Metadata = {
 
 /**
  * Mirrors the original site's sign-up page. The original embedded an external checkout whose URL wasn't captured,
- * so online sign-up only appears once `membership.onlineSignupUrl` is set (or swap in the Nautilus checkout drawer).
+ * so online sign-up only appears once the Nautilus checkout is switched on or `membership.onlineSignupUrl` is set.
  */
 export default async function JoinPage({ searchParams }: { searchParams: Promise<{ plan?: string | string[] }> }) {
   const params = await searchParams;
   const requested = Array.isArray(params.plan) ? params.plan[0] : params.plan;
   const selected = clubPlans.find((plan) => plan.id === requested) ?? clubPlans[clubPlans.length - 1];
-  const ways = membership.waysToJoin.filter((way) => way.title !== "Online" || membership.onlineSignupUrl);
+  const onlineAvailable = nautilusCheckoutEnabled || Boolean(membership.onlineSignupUrl);
+  const ways = membership.waysToJoin.filter((way) => way.title !== "Online" || onlineAvailable);
 
   return (
     <>
@@ -112,10 +114,10 @@ export default async function JoinPage({ searchParams }: { searchParams: Promise
               <h3 className="font-heading text-2xl font-bold">{way.title}</h3>
               <p className="mt-2 flex-1 leading-relaxed text-muted-foreground">{way.body}</p>
               <div className="mt-6">
-                {way.title === "Online" && membership.onlineSignupUrl ? (
-                  <a href={membership.onlineSignupUrl} className={buttonVariants({ className: "w-full" })}>
+                {way.title === "Online" && onlineAvailable ? (
+                  <JoinPlanButton planId={selected.id} className={buttonVariants({ className: "w-full" })}>
                     Sign up for {selected.name} <ArrowRight aria-hidden />
-                  </a>
+                  </JoinPlanButton>
                 ) : null}
                 {way.title === "At the pay kiosk" ? (
                   <a href={site.maps.directions} target="_blank" rel="noopener noreferrer" className={buttonVariants({ className: "w-full" })}>
