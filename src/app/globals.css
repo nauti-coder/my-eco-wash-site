@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  My Eco Wash brand tokens. Sampled from myecowash.com:
+  indigo #4646CA (headings, labels, Subscribe pills), navy #2E3083 (dark blocks),
+  lime #3BD620 (CTA pills, the vacuum canopies), logo blue #1929B6, logo leaf green #30F338.
+  Every color is an HSL custom property — never hardcode hex in components.
+*/
+@layer base {
+  :root {
+    --background: 240 25% 97%;
+    --foreground: 239 38% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 239 38% 14%;
+    --primary: 240 55% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 239 48% 35%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 111 74% 48%;
+    --accent-foreground: 239 48% 16%;
+    --accent-deep: 111 70% 34%;
+    --destructive: 111 74% 48%;
+    --destructive-foreground: 239 48% 16%;
+    --muted: 240 33% 93%;
+    --muted-foreground: 239 14% 38%;
+    --border: 240 20% 87%;
+    --input: 240 20% 87%;
+    --ring: 240 55% 53%;
+
+    --royal: 234 76% 41%;
+    --leaf: 122 89% 57%;
+    --navy-deep: 239 52% 13%;
+    --lime-soft: 105 75% 88%;
+    --indigo-soft: 240 70% 95%;
+
+    --radius: 1.25rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-foreground;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.45);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Page container: 1200px column with responsive side padding. */
+  .container-px {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-10;
+  }
+
+  /* Small uppercase section label, the original site's indigo tracked caps. */
+  .eyebrow {
+    @apply font-heading text-xs font-semibold uppercase tracking-[0.22em] text-primary sm:text-sm;
+  }
+
+  /* Scroll reveal. Only hides content once JS has marked <html class="js">, so no-JS visitors see everything. */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s ease-out,
+      transform 0.7s ease-out;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .js .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

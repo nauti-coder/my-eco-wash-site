@@ -1,0 +1,163 @@
+{
+  "sourceUrl": "https://www.myecowash.com",
+  "extractedAt": "2026-10-30T20:55:00Z",
+  "extractionMethod": "Manual transcription from the user's screen recording of the live site (Firecrawl unavailable: no FIRECRAWL_API_KEY in this session, and the site disallows automated fetching). Colors were sampled from full-resolution frames; logo and photos were cropped from the recording.",
+  "branding": {
+    "logo": "assets/my-eco-wash-logo.png",
+    "colorScheme": "light",
+    "colors": {
+      "hex": {
+        "indigo": "#4646CA",
+        "navy": "#2E3083",
+        "lime": "#3BD620",
+        "logoBlue": "#1929B6",
+        "logoGreen": "#30F338",
+        "canvas": "#F3F3F3",
+        "charcoal": "#2F2F2F",
+        "headingGray": "#3F3F3F",
+        "textPrimary": "#1E1E1E",
+        "background": "#FFFFFF"
+      },
+      "hsl": {
+        "indigo": "240 55% 53%",
+        "navy": "239 48% 35%",
+        "lime": "111 74% 48%",
+        "logoBlue": "234 76% 41%",
+        "logoGreen": "122 89% 57%",
+        "canvas": "0 0% 95%",
+        "charcoal": "0 0% 18%",
+        "headingGray": "0 0% 25%",
+        "textPrimary": "0 0% 12%",
+        "background": "0 0% 100%"
+      },
+      "usage": {
+        "indigo": "Announcement bar, section headings (OUR MISSION), FAQ question labels, 'Subscribe' pill buttons, links",
+        "navy": "Full-bleed dark blocks (Our Mission, Location & hours, Stay Connected)",
+        "lime": "Primary pill CTAs ('Click Here To View Our Monthly Memberships!', 'Learn More', 'Sales Agent'); also the lime-green vacuum canopies on site",
+        "logoBlue": "MEW letters, 'MY' and 'WASH' in the logo",
+        "logoGreen": "Leaf/drop and 'ECO' in the logo",
+        "canvas": "Light section background",
+        "charcoal": "Footer background"
+      }
+    },
+    "fonts": {
+      "body": "Source Serif 4 (stand-in for the original's transitional serif body face)",
+      "heading": "Outfit (stand-in for the original's geometric sans, Sofia Pro-like)",
+      "display": null,
+      "all": ["Outfit", "Source Serif 4"]
+    },
+    "typography": {
+      "headings": "Geometric sans, bold, often uppercase (OUR IMPACT, SINGLE WASHES, STAY CONNECTED); sentence-case on content pages (Frequently Asked Questions, How it works)",
+      "labels": "Small uppercase geometric sans with wide letter-spacing in indigo (e.g. 'HOW DO I SIGN UP FOR THE UNLIMITED ECO WASH CLUB?', 'READY TO JOIN THE MY ECO WASH TEAM?')",
+      "body": "Serif, ~17px, relaxed line height",
+      "buttons": "Fully rounded pills; lime with white text, or indigo with white text"
+    },
+    "spacing": {
+      "feel": "Generous whitespace, ~1000px content column, large color blocks with hard edges, square photo/card corners, pill buttons"
+    },
+    "images": {
+      "logo": "assets/my-eco-wash-logo.png",
+      "favicon": null,
+      "ogImage": null,
+      "all": [
+        "assets/hero-building-sign.jpg — storefront: MEW sign, 'FREE VACUUMS & AIR', '18440', soft-cloth tunnel entrance with a car mid-wash",
+        "assets/vacuum-canopies.jpg — lime-green vacuum canopies on blue vacuum arms, palm tree, cars at the vacuum stalls",
+        "assets/conveyor-car.jpg — white Dodge Charger rolling onto the blue conveyor at the tunnel entrance"
+      ],
+      "notUsed": "Canva-style product tiles (blue 'Single Washes' and green 'Unlimited Eco Wash Club' squares with baked-in text) — replaced by real typography"
+    }
+  },
+  "business": {
+    "name": "My Eco Wash",
+    "logoTagline": "My Eco Wash Car Wash",
+    "locations": [
+      {
+        "name": "Pembroke Pines",
+        "address": "18440 Pines Blvd.",
+        "city": "Pembroke Pines",
+        "state": "FL",
+        "zip": "33029",
+        "hours": "Open everyday 8:00 am – 8:00 pm",
+        "phone": "+1 (954) 391-7017",
+        "email": "info@myecowash.com",
+        "amenities": ["Free vacuums & air (sign on building)"]
+      }
+    ],
+    "social": {
+      "instagram": "TODO: handle not visible in the recording",
+      "facebook": "TODO: page URL not visible in the recording"
+    },
+    "announcementBar": "Sign Up, Save, & Wash Every Day! Click Here To Join The My Eco Wash Club Today!",
+    "membershipSignup": "Announcement bar and 'Subscribe' buttons lead to an external sign-up checkout (plan radio buttons, contact fields, card fields, SMS consent, reCAPTCHA). URL not visible in the recording. Do NOT rebuild this form — link to it."
+  },
+  "pages": [
+    {
+      "url": "/",
+      "title": "Home",
+      "description": "Homepage",
+      "content": "## Hero\nJOIN & SAVE — [Join Now] (photo of the storefront and vacuum canopies)\n\n## OUR MISSION\nWe strive to provide the best car washes and customer service experiences possible. Our formula is simple: making people feel good by delivering an eco-friendly alternative, spotless, and professional car wash every single time. We believe that no matter what you drive, you will feel happier about your car after visiting our car wash!\n\n## SINGLE WASHES\nManager Special (Express Wash) · The Ultimate (Express Wash) · Wheel & Clean (Express Wash) · The Basic (Express Wash) — no prices shown on the homepage.\n[Click Here To View Our Monthly Memberships!]\n\n## Location\nLOCATED IN PEMBROKE PINES, FLORIDA\nOPEN EVERYDAY 8:00 am - 8:00 pm\n(Google Map)\n\n## OUR IMPACT\nMy Eco Wash is a business that relies on water, which is a precious resource. By washing your vehicle at My Eco Wash, you help us conserve water through our water-saving technology. We are committed to providing you with the best experience through state-of-the-art equipment, products, and service. [Learn More]\n\n1 — STATE-OF-THE-ART WATER RECLAIM SYSTEM: At My Eco Wash, we have the capacity to store over 120,000 liters of reclaimed water at any one point in time!\n2 — ECO-FRIENDLY BIODEGRADABLE SOAPS AND DETERGENTS.: Did you know that washing your car at home can introduce non-biodegradable soaps, oils, brake dust, and other pollutants into our streams, rivers, lakes, and oceans? At My Eco Wash, we only use premium soaps and chemicals.\n3 — FUNDRAISING & OUR COMMUNITY: Our commitment extends beyond the car wash tunnel. We actively participate in our local community through various programs and events. Part of being a conscious neighbor is looking for ways to improve and provide a brighter future for our team members, community, and the world we live in.\n\n## STAY CONNECTED\nSign up with your email address to receive news, updates, and special promotions. (First Name, Last Name, Email Address, SIGN UP) We respect your privacy.",
+      "images": ["assets/hero-building-sign.jpg", "assets/vacuum-canopies.jpg", "assets/conveyor-car.jpg"]
+    },
+    {
+      "url": "/unlimited-wash-plans",
+      "title": "Unlimited Wash Plans",
+      "description": "Unlimited Eco Wash Club membership plans",
+      "content": "# UNLIMITED ECO WASH CLUB\n\n### Unlimited Eco Wash Club - Manager Special — $39.99 every month\nThis Monthly Package Includes: Pre-Soak; Soft Cloth Automatic Wash; Underbody Rinse; Wheel Cleaner; Hot Wax & Shine; Triple Foam Polish; Spot Free Rinse; Jet Dry; Black Magic Tire Shine; Step 1 & 2 Wheel Cleaner; Rain – X; Automatic Dry N' Shine. [Subscribe]\n\n### Unlimited Eco Wash Club - The Ultimate — $32.99 every month\nThis Monthly Package Includes: Pre-Soak; Soft Cloth Automatic Wash; Wheel Cleaner; Hot Wax & Shine; Triple Foam Polish; Spot Free Rinse; Jet Dry; Black Magic Tire Shine; Step 1 & 2 Wheel Cleaner; Rain – X. [Subscribe]\n\n### Unlimited Eco Wash Club - Wheel & Clean — $24.99 every month\nThis Monthly Package Includes: Pre-Soak; Soft Cloth Automatic Wash; Under Body Rinse; Triple Foam Polish; Spot Free Rinse; Jet Dry; Step 1 & 2 Wheel Cleaner. [Subscribe]\n\n## Wash your vehicle once a day for one low monthly fee!\nIf you like a clean car and want to wash it once a day, once a week, or as often as you can, all for one low price, then the Unlimited Eco Wash Club is for you! Simply select the desired wash package, and your credit card will be charged a flat monthly fee.\n\n## How it works\nThe Unlimited Eco Wash Club is vehicle-specific and can only be associated with one vehicle. A radio frequency identification decal (\"RFID\") wirelessly approves your Unlimited Eco Wash Club each time you visit us at My Eco Wash. The RFID must be placed on your vehicle's windscreen. If you purchase a new vehicle, simply contact us to update your vehicle profile and have a new RFID installed.\n\n## How often can I wash?\nYou may wash your vehicle once every 24 hours during the month. My Eco Wash will only be closed on specified public holidays and during hurricanes. Please refer to our website for further details.\n\n## How are you charged each month?\nMy Eco Wash charges your credit card month-to-month. There are no long-term commitments or hidden cancellation charges. In the event that you would like to cancel your membership, My Eco Wash must receive written notice 14 days before your next billing date. No refunds or credits will be given for partial periods; however, you may continue to use your membership until your expiry date.\n\n## What happens next?\nAfter receipt of this form and your first initial payment is made, please visit us at My Eco Wash to place your RFID sticker onto your vehicle's windscreen. For more information, please call or visit us, and our staff will be very happy to assist you.\n\n## Terms & Conditions\nRead Our Unlimited Eco Wash Club Terms & Conditions Here. (link target not visible)",
+      "images": []
+    },
+    {
+      "url": "/work-with-us",
+      "title": "Work With Us",
+      "description": "Careers",
+      "content": "# We Are Now Hiring!\nREADY TO JOIN THE MY ECO WASH TEAM?\nWe place great value on recruiting, developing, and training professionals who are passionate about their work. We are looking for detail-oriented team players who take pride in their work and serve customers by providing car wash services in a safe, fast, and friendly environment at My Eco Wash.\n[Sales Agent] [Express Crew Member] (link targets not visible)",
+      "images": []
+    },
+    {
+      "url": "/faq",
+      "title": "FAQ",
+      "description": "Frequently Asked Questions",
+      "content": "# Frequently Asked Questions\n\n### HOW DO I SIGN UP FOR THE UNLIMITED ECO WASH CLUB?\nThe Unlimited Eco Wash Club is available for purchase online, at every My Eco Wash location through our automated pay kiosk, or by speaking with our team! Choose From Our Unlimited Eco Wash Club Packages: [Unlimited Eco Wash Club]\n\n### DOES ANY OF THE WATER USED IN THE CAR WASH GET RECYCLED?\nThroughout the entire car wash process at My Eco Wash, we use the most advanced water reclamation technology and equipment (Reverse Osmosis Filtration Systems).\n\n### HOW DOES THE UNLIMITED ECO WASH CLUB WORK?\nOur memberships allow you to wash up to once per day at any My Eco Wash location. You will receive an RFID sticker that will be placed on the inside of your front windshield. Our system will automatically scan your decal when you drive up to our pay kiosk area. This will allow you to enter the car wash without any further action required. On the date your purchase is confirmed, your membership will renew automatically every month on that date.\n\n### HOW DO I CANCEL MY UNLIMITED ECO WASH CLUB MEMBERSHIP?\nMembership plans can be canceled at any time up to 14 days before your monthly recharge date. Please ask to fill out a cancellation form at the store or give us a call. Be sure to continue washing through the end of your last paid month.\n\n### WHAT KIND OF SOAPS AND WAXES DO YOU USE?\nAll of our cleansers, soaps, and waxes are 100% biodegradable. They are carefully tested to ensure they are safe for both your vehicle and the environment. We have invested in state-of-the-art chemical mixing technology that delivers precise amounts of crystal-clear water and gentle, effective cleansers, soaps, and waxes.\n\n### IS YOUR CAR WASH SAFE FOR MY VEHICLE?\nOur car washes are designed to leave your vehicle clean, shiny, and dry, with no damage. However, we cannot be responsible for the following items: Antennas (we recommend lowering/removing before washing). Rearview mirrors (we recommend folding them in before washing). Rear hitch/spare tire (if not removed, the back of your vehicle will not be cleaned). Windshield wipers (ensure they are off before washing). Pre-existing damage to any exterior part/surface (known/unknown). Non-factory or dealer-installed equipment. Moldings/chrome/decals/pin striping. Bug shields and guards. Convertible soft tops. Damaged/oxidations on paint or clear coat. Anything on vehicles 1 year or older.\n\n### ARE THERE ANY KINDS OF VEHICLES THAT CANNOT BE WASHED?\nYes, for your safety, we cannot wash vehicles with the following items: Vehicles with excessive mud. Vehicles taller than 7 feet. Dual-wheel trucks. Tires wider than 12 inches. Truck beds with debris, oil, or fuel tanks. Vehicles with less than 4 inches of ground clearance. Vehicles with excessive body damage or loose parts. No trailers or vehicles longer than 21 feet.\n\n### HOW LONG CAN I USE THE VACUUMS?\nOur vacuums are free to use with the purchase of any wash or membership plan and can be used as long as needed. During busy times, we ask that you please limit your vacuum use to 10 minutes so that others may utilize our free services.",
+      "images": []
+    },
+    {
+      "url": "/contact-us",
+      "title": "Contact Us",
+      "description": "Linked from the footer; page not shown in the recording",
+      "content": null,
+      "images": []
+    },
+    {
+      "url": "/privacy-policy",
+      "title": "Privacy Policy & Terms Of Service",
+      "description": "Linked from the footer; page not shown in the recording",
+      "content": null,
+      "images": []
+    }
+  ],
+  "siteMap": ["/", "/unlimited-wash-plans", "/work-with-us", "/faq", "/contact-us", "/privacy-policy", "(external) membership sign-up checkout", "(store items) one page per club plan and per single wash"],
+  "footer": {
+    "columns": {
+      "MY ECO WASH": ["18440 Pines Blvd.", "Pembroke Pines, FL, 33029", "Phone: +1 (954) 391-7017", "Email: info@myecowash.com"],
+      "POLICIES": ["Privacy Policy & Terms Of Service", "FAQ"],
+      "COMPANY": ["Contact Us", "Work With Us"]
+    },
+    "social": ["Instagram", "Facebook"]
+  },
+  "missingContent": [
+    "Single-wash prices (Manager Special, The Ultimate, Wheel & Clean, The Basic) — not shown on the homepage",
+    "What The Basic single wash includes",
+    "Membership sign-up/checkout URL (announcement bar, Join Now, Subscribe buttons)",
+    "Instagram and Facebook URLs",
+    "Job application links for Sales Agent and Express Crew Member",
+    "Contact Us page content",
+    "Privacy Policy & Terms of Service text",
+    "Unlimited Eco Wash Club Terms & Conditions document",
+    "Newsletter (Stay Connected) form destination",
+    "Original-resolution logo file (current logo is cropped from the recording)",
+    "Original-resolution photos (current photos are cropped from the recording)"
+  ],
+  "metadata": {
+    "totalPages": 6,
+    "pagesWithContent": 4
+  }
+}
