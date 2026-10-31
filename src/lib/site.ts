@@ -76,7 +76,7 @@ export const footerNav = {
     { label: "Contact Us", href: routes.contact },
     { label: "Work With Us", href: routes.workWithUs },
     { label: "Unlimited Wash Plans", href: routes.plans },
-    { label: "Join the Club", href: routes.join },
+    { label: "Join the Club", href: routes.plans },
   ],
 } as const;
 
@@ -135,11 +135,8 @@ export function checkoutSrc(planId: PlanId): string | null {
 /** Where a package's Join button goes while the Nautilus drawer is off: the current online sign-up, else our /join page. */
 export const packageJoinHref = (planId: PlanId) => membership.onlineSignupUrl ?? `${routes.join}?plan=${planId}`;
 
-/**
- * Where Join CTAs that name no package go. With the drawer on they lead to the package cards
- * (a checkout without a package would list everything); otherwise to the online sign-up or /join.
- */
-export const joinCtaHref = nautilusCheckoutEnabled ? routes.plans : (membership.onlineSignupUrl ?? routes.join);
+/** Where general "Join the Club" buttons (no specific package) go: the package cards on the plans page. */
+export const joinCtaHref = routes.plans;
 
 export type PlanId = "manager-special" | "the-ultimate" | "wheel-and-clean";
 
